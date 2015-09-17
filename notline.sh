@@ -7,16 +7,16 @@ while true; do
     message=$(cat $config)
     case "$message" in
         'disconnected_notifications')
-            status="You have new messages and your client not online." ;;
+            status="You have new events and your client is not online." ;;
 
         'connected_notifications')
-            status="You have new messages!" ;;
+            status="You have new events!" ;;
 
         'disconnected')
-            status="Your client is disconnected." ;;
+            status="Your client has disconnected." ;;
 
         'connected')
-            status="Your client is online." ;;
+            status="Your client is now online." ;;
 
         'quit')
             status="Your client was closed or crashed." ;;
