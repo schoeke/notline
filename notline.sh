@@ -6,6 +6,7 @@ config=${1:-~/.config/ocaml-xmpp-client/notification.state}
 while true; do
     message=$(cat $config)
     case "$message" in
+        
         'disconnected_notifications')
             status="You have new events and your client is not online." ;;
 
@@ -21,7 +22,7 @@ while true; do
         'quit')
             status="Your client was closed or crashed." ;;
 
-        *) status="Unknown status."
+        *) status="Unknown status." ;;
 
     esac
 
